@@ -1,5 +1,5 @@
 ﻿namespace Chess;
-
+// прикол
 public partial class MainPage : ContentPage
 {
     int count = 0;
