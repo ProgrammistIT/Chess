@@ -15,26 +15,36 @@
 
             <Label
                 Text="Приветствуем в наших шахматах"
+                FontSize="30"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level4" />
-            <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
-                <Label Text="Начало" 
-                       Style="{StaticResource Headline}"
-                       SemanticProperties.HeadingLevel="Level1" />
-                <Label Text="СЕРЕДИНА" TextColor="Blue" FontAttributes="Italic" />
-                <Label Text="Конец" />
-            </HorizontalStackLayout>
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                SemanticProperties.HeadingLevel="Level9" />
+            <VerticalStackLayout Spacing="-20">
+                <Label Text="Chess" 
+                           FontSize="60"
+                           Style="{StaticResource Headline}"
+                           SemanticProperties.HeadingLevel="Level1" />
+                <HorizontalStackLayout Spacing="9" HorizontalOptions="Center">
+                    <Label Text=" not " TextColor="Red" 
+                           FontAttributes="Italic"
+                           FontSize="40"
+                           Style="{StaticResource Headline}"
+                           SemanticProperties.HeadingLevel="Level1" />
+                    <Label Text="com" 
+                           FontAttributes="Italic"
+                           FontSize="40"
+                           Style="{StaticResource Headline}" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
             <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
+                Text="Новая игра" 
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
+            <Button
+                Text="Продолжить игру" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                HorizontalOptions="Center"
+                WidthRequest="300"/>
         </VerticalStackLayout>
     </ScrollView>
 
