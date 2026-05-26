@@ -1,7 +1,16 @@
 using Chess.Backend.Enums;
 namespace Chess.Backend.Models.Pieces;
 
-public class Queen : Piece
+public class Queen : Rook
 {
     public Queen(PieceColor color) : base(color, PieceType.Queen) {}
+
+    public override IEnumerable<(int Row, int Col)> GetValidMoves(Square[,] square, int row, int column)
+    {
+        foreach (var (dr, dc) in new[] { (1, 0), (0, 1), (-1, 0), (0, -1), (-1, -1), (-1, 1), (1, 1), (1, -1) })
+        {
+            foreach (var move in Slide(square, row, column, dr, dc))
+                yield return move;
+        }
+    }
 }
