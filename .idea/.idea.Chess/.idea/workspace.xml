@@ -15,7 +15,11 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Add debug button, New game open new window" />
+    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Add debug button, New game open new window">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MainPage.xaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,63 +57,64 @@
     <commands />
     <urls />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000047880684306" />
-      <entry key="S2" value="1.2724536352417282" />
-      <entry key="S5" value="3.1070872649359833" />
-      <entry key="S10" value="6.351793945629386" />
-      <entry key="S30" value="15.397442409455417" />
-      <entry key="S60" value="23.843634164034274" />
-      <entry key="M2" value="38.75416885639691" />
-      <entry key="M5" value="70.08380568543224" />
-      <entry key="M10" value="103.95807426950319" />
-      <entry key="M15" value="128.8210520159031" />
-      <entry key="M30" value="173.84476761227214" />
-      <entry key="H1" value="211.1586231353042" />
-      <entry key="H2" value="235.85704048343646" />
-      <entry key="H4" value="250.1661493420334" />
-      <entry key="D1" value="263.2473263621693" />
-      <entry key="W1" value="265.60386808335915" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.0878848326953937E-90" />
+      <entry key="S2" value="1.2964952196985164E-22" />
+      <entry key="S5" value="4.614384920010322E-9" />
+      <entry key="S10" value="1.5793388761752329E-4" />
+      <entry key="S30" value="0.18752445433099704" />
+      <entry key="S60" value="1.3868396597247123" />
+      <entry key="M2" value="6.078029917062058" />
+      <entry key="M5" value="26.680909673459936" />
+      <entry key="M10" value="63.725803091079506" />
+      <entry key="M15" value="95.65324812258814" />
+      <entry key="M30" value="159.78435662171043" />
+      <entry key="H1" value="218.25983072057267" />
+      <entry key="H2" value="259.3831071898487" />
+      <entry key="H4" value="284.0376463959842" />
+      <entry key="D1" value="307.08848856089014" />
+      <entry key="W1" value="311.2919036842382" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.4752494140544247E-265" />
-      <entry key="MS500" value="1.1879045725359462E-53" />
-      <entry key="S2" value="8.950310594881807E-14" />
-      <entry key="S5" value="9.060701771094899E-6" />
-      <entry key="S10" value="0.004314534011167662" />
-      <entry key="S30" value="0.3677836562032251" />
-      <entry key="S60" value="1.8441634118202754" />
-      <entry key="M2" value="5.627494127341759" />
-      <entry key="M5" value="13.20846847907258" />
-      <entry key="M10" value="20.913799424071076" />
-      <entry key="M15" value="26.902122631839767" />
-      <entry key="M30" value="38.36866546391866" />
-      <entry key="H1" value="48.222574505635734" />
-      <entry key="H2" value="54.84558829733307" />
-      <entry key="H4" value="58.70831405075006" />
-      <entry key="D1" value="62.25273268134462" />
-      <entry key="W1" value="62.892433746425816" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000042437545" />
+      <entry key="S10" value="1.0000920848027761" />
+      <entry key="S30" value="1.0725685184723555" />
+      <entry key="S60" value="1.4788701195505654" />
+      <entry key="M2" value="3.0242813577006564" />
+      <entry key="M5" value="8.908047093588085" />
+      <entry key="M10" value="17.97222780698461" />
+      <entry key="M15" value="25.57879957487415" />
+      <entry key="M30" value="41.211127581980065" />
+      <entry key="H1" value="55.892605026401014" />
+      <entry key="H2" value="66.39801357477134" />
+      <entry key="H4" value="72.75176420782405" />
+      <entry key="D1" value="78.72390795568042" />
+      <entry key="W1" value="79.81595079558257" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9726549474122855" />
-      <entry key="MS500" value="0.9945177974078313" />
-      <entry key="S2" value="1.2706696347428699" />
-      <entry key="S5" value="3.104493080844617" />
-      <entry key="S10" value="6.351541075151697" />
-      <entry key="S30" value="15.747929516705787" />
-      <entry key="S60" value="25.658786686587973" />
-      <entry key="M2" value="44.34310845995323" />
-      <entry key="M5" value="83.2541781612545" />
-      <entry key="M10" value="124.8376342353314" />
-      <entry key="M15" value="155.69169785510988" />
-      <entry key="M30" value="212.189180694242" />
-      <entry key="H1" value="259.3653727816512" />
-      <entry key="H2" value="290.69346872701936" />
-      <entry key="H4" value="308.8695189633071" />
-      <entry key="D1" value="325.4991791923291" />
-      <entry key="W1" value="328.49617469792787" />
+      <entry key="MS100" value="0.008608633717786017" />
+      <entry key="MS500" value="0.3863552748239937" />
+      <entry key="S2" value="0.7884001740562783" />
+      <entry key="S5" value="0.9092821975369768" />
+      <entry key="S10" value="0.9537984819619835" />
+      <entry key="S30" value="1.2398722140898324" />
+      <entry key="S60" value="2.843556545249204" />
+      <entry key="M2" value="9.073301388555679" />
+      <entry key="M5" value="35.55500676293431" />
+      <entry key="M10" value="81.66471832088055" />
+      <entry key="M15" value="121.20016673218939" />
+      <entry key="M30" value="200.96901734535888" />
+      <entry key="H1" value="274.1340656761847" />
+      <entry key="H2" value="325.7700660993498" />
+      <entry key="H4" value="356.78331341556867" />
+      <entry key="D1" value="385.81129063645454" />
+      <entry key="W1" value="391.1076941487876" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -206,7 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1779969050548</updated>
       <workItem from="1779969052098" duration="474000" />
-      <workItem from="1779969548566" duration="4293000" />
+      <workItem from="1779969548566" duration="5408000" />
     </task>
     <task id="LOCAL-00001" summary="Add debug button, New game open new window">
       <option name="closed" value="true" />
@@ -216,13 +221,33 @@
       <option name="project" value="LOCAL" />
       <updated>1779973802348</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add debug button, New game open new window">
+      <option name="closed" value="true" />
+      <created>1779973852697</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779973852697</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add debug button, New game open new window" />
     <option name="LAST_COMMIT_MESSAGE" value="Add debug button, New game open new window" />
