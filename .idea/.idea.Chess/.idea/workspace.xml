@@ -15,16 +15,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/AndroidProjectSystem.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Debug.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Debug.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GamePage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GamePage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MainPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainPage.xaml.cs" afterDir="false" />
-    </list>
+    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Add debug button, New game open new window" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,60 +56,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000033650016728" />
-      <entry key="S2" value="1.099126516444895" />
-      <entry key="S5" value="1.8008822305645467" />
-      <entry key="S10" value="4.538684464617896" />
-      <entry key="S30" value="19.341576059155525" />
-      <entry key="S60" value="33.05179104182093" />
-      <entry key="M2" value="46.4844653792984" />
-      <entry key="M5" value="66.78925350863594" />
-      <entry key="M10" value="92.79615322430715" />
-      <entry key="M15" value="113.67193800248344" />
-      <entry key="M30" value="152.1843539032434" />
-      <entry key="H1" value="183.9456561356864" />
-      <entry key="H2" value="204.78343409017594" />
-      <entry key="H4" value="216.78325172190196" />
-      <entry key="D1" value="227.70691128263434" />
-      <entry key="W1" value="229.67012461472893" />
+      <entry key="MS500" value="1.000047880684306" />
+      <entry key="S2" value="1.2724536352417282" />
+      <entry key="S5" value="3.1070872649359833" />
+      <entry key="S10" value="6.351793945629386" />
+      <entry key="S30" value="15.397442409455417" />
+      <entry key="S60" value="23.843634164034274" />
+      <entry key="M2" value="38.75416885639691" />
+      <entry key="M5" value="70.08380568543224" />
+      <entry key="M10" value="103.95807426950319" />
+      <entry key="M15" value="128.8210520159031" />
+      <entry key="M30" value="173.84476761227214" />
+      <entry key="H1" value="211.1586231353042" />
+      <entry key="H2" value="235.85704048343646" />
+      <entry key="H4" value="250.1661493420334" />
+      <entry key="D1" value="263.2473263621693" />
+      <entry key="W1" value="265.60386808335915" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="9.380341682666098E-5" />
-      <entry key="MS500" value="0.15668254250012217" />
-      <entry key="S2" value="0.8570560652879234" />
-      <entry key="S5" value="2.117190701831164" />
-      <entry key="S10" value="3.7651838484565636" />
-      <entry key="S30" value="7.659721968420586" />
-      <entry key="S60" value="10.460180389704835" />
-      <entry key="M2" value="13.085527484585155" />
-      <entry key="M5" value="16.645138163990087" />
-      <entry key="M10" value="21.99361650372001" />
-      <entry key="M15" value="26.986565021563642" />
-      <entry key="M30" value="36.91351602270194" />
-      <entry key="H1" value="45.42507663618832" />
-      <entry key="H2" value="51.09067706248354" />
-      <entry key="H4" value="54.37266444047565" />
-      <entry key="D1" value="57.36983636346355" />
-      <entry key="W1" value="57.909327090438765" />
+      <entry key="MS100" value="1.4752494140544247E-265" />
+      <entry key="MS500" value="1.1879045725359462E-53" />
+      <entry key="S2" value="8.950310594881807E-14" />
+      <entry key="S5" value="9.060701771094899E-6" />
+      <entry key="S10" value="0.004314534011167662" />
+      <entry key="S30" value="0.3677836562032251" />
+      <entry key="S60" value="1.8441634118202754" />
+      <entry key="M2" value="5.627494127341759" />
+      <entry key="M5" value="13.20846847907258" />
+      <entry key="M10" value="20.913799424071076" />
+      <entry key="M15" value="26.902122631839767" />
+      <entry key="M30" value="38.36866546391866" />
+      <entry key="H1" value="48.222574505635734" />
+      <entry key="H2" value="54.84558829733307" />
+      <entry key="H4" value="58.70831405075006" />
+      <entry key="D1" value="62.25273268134462" />
+      <entry key="W1" value="62.892433746425816" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.687145108839446E-4" />
-      <entry key="MS500" value="0.29700824935823383" />
-      <entry key="S2" value="1.5100730085716545" />
-      <entry key="S5" value="3.645042471474713" />
-      <entry key="S10" value="8.0966542830715" />
-      <entry key="S30" value="26.847614769432763" />
-      <entry key="S60" value="43.39440236092577" />
-      <entry key="M2" value="59.48905253091659" />
-      <entry key="M5" value="83.38595723189546" />
-      <entry key="M10" value="114.7522176646414" />
-      <entry key="M15" value="140.62546236652642" />
-      <entry key="M30" value="189.07356670743263" />
-      <entry key="H1" value="229.3552835188157" />
-      <entry key="H2" value="255.8652937350449" />
-      <entry key="H4" value="271.15119148365534" />
-      <entry key="D1" value="285.07591215219725" />
-      <entry key="W1" value="287.5793311139389" />
+      <entry key="MS100" value="0.9726549474122855" />
+      <entry key="MS500" value="0.9945177974078313" />
+      <entry key="S2" value="1.2706696347428699" />
+      <entry key="S5" value="3.104493080844617" />
+      <entry key="S10" value="6.351541075151697" />
+      <entry key="S30" value="15.747929516705787" />
+      <entry key="S60" value="25.658786686587973" />
+      <entry key="M2" value="44.34310845995323" />
+      <entry key="M5" value="83.2541781612545" />
+      <entry key="M10" value="124.8376342353314" />
+      <entry key="M15" value="155.69169785510988" />
+      <entry key="M30" value="212.189180694242" />
+      <entry key="H1" value="259.3653727816512" />
+      <entry key="H2" value="290.69346872701936" />
+      <entry key="H4" value="308.8695189633071" />
+      <entry key="D1" value="325.4991791923291" />
+      <entry key="W1" value="328.49617469792787" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -215,12 +206,25 @@
       <option name="presentableId" value="Default" />
       <updated>1779969050548</updated>
       <workItem from="1779969052098" duration="474000" />
-      <workItem from="1779969548566" duration="3980000" />
+      <workItem from="1779969548566" duration="4293000" />
     </task>
+    <task id="LOCAL-00001" summary="Add debug button, New game open new window">
+      <option name="closed" value="true" />
+      <created>1779973802348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779973802348</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add debug button, New game open new window" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add debug button, New game open new window" />
+  </component>
 </project>
