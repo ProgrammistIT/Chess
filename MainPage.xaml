@@ -52,11 +52,14 @@
             DEBUG
             DELETE ON RELISE
             -->
-            <Button 
-                x:Name="OpenFolder"
-                    Text="Открыть папку"
-                    HorizontalOptions="End"
-                    WidthRequest="500"/>
+            <Button
+                x:Name="OpenDebugWindow"
+                Text="Открыть окно дебага"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                WidthRequest="300"
+                Clicked="OpenDebugWindow_OnClicked"
+                />
         </VerticalStackLayout>
     </ScrollView>
 
