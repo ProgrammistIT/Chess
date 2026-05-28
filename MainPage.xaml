@@ -24,27 +24,39 @@
                            Style="{StaticResource Headline}"
                            SemanticProperties.HeadingLevel="Level1" />
                 <HorizontalStackLayout Spacing="9" HorizontalOptions="Center">
-                    <Label Text=" not " TextColor="Red" 
-                           FontAttributes="Italic"
+                    <Label Text=" not " TextColor="Red"
                            FontSize="40"
                            Style="{StaticResource Headline}"
                            SemanticProperties.HeadingLevel="Level1" />
-                    <Label Text="com" 
-                           FontAttributes="Italic"
+                    <Label Text="com"
                            FontSize="40"
                            Style="{StaticResource Headline}" />
                 </HorizontalStackLayout>
             </VerticalStackLayout>
             <Button
-                Text="Новая игра" 
-                SemanticProperties.Hint="Counts the number of times you click"
+                x:Name="NewGame"
+                Clicked="NewGame_Clicked"
+                Text="Новая игра"
                 HorizontalOptions="Center"
                 WidthRequest="300"/>
             <Button
+                x:Name="ContinueButton"
                 Text="Продолжить игру" 
-                SemanticProperties.Hint="Counts the number of times you click"
                 HorizontalOptions="Center"
                 WidthRequest="300"/>
+            
+            
+            
+            
+            <!--
+            DEBUG
+            DELETE ON RELISE
+            -->
+            <Button 
+                x:Name="OpenFolder"
+                    Text="Открыть папку"
+                    HorizontalOptions="End"
+                    WidthRequest="500"/>
         </VerticalStackLayout>
     </ScrollView>
 
