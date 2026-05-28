@@ -10,11 +10,47 @@ namespace Chess;
 
 public partial class Debug : ContentPage
 {
+    private bool _isTimerActive;
+    private bool _shouldStop;
+    private const double IntervalTimer = 1.0;
+    private static readonly string FolderPath = FileSystem.Current.AppDataDirectory;
+    
     public Debug()
     {
         InitializeComponent();
     }
-    private static readonly string FolderPath = FileSystem.Current.AppDataDirectory;
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        _shouldStop = false;
+        _isTimerActive = true;
+        CheckFileAndUpdateButton();
+
+        if (!_isTimerActive)
+        {
+            _isTimerActive = true;
+            Dispatcher.StartTimer(TimeSpan.FromSeconds(IntervalTimer), CheckFileAndUpdateButton);
+        }
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        _shouldStop = true;
+    }
+    private bool CheckFileAndUpdateButton()
+    {
+        if (_shouldStop)
+        {
+            _isTimerActive = false;
+            return false;
+        }
+
+        DelFiles.IsEnabled = MainPageButtons.HasSavedFile();
+        
+        return true;
+    }
 
     private async void OpenFolder_Clicked(object sender, EventArgs e)
     {
@@ -43,5 +79,12 @@ public partial class Debug : ContentPage
     private void CloseDebug_OnClicked(object? sender, EventArgs e)
     {
         Navigation.PopModalAsync();
+    }
+
+    private void DelFiles_OnClicked(object? sender, EventArgs e)
+    {
+        File.Delete(Path.Combine(FolderPath, "game.xml"));
+        File.Delete(Path.Combine(FolderPath, "game.json"));
+        CheckFileAndUpdateButton();
     }
 }

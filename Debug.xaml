@@ -21,6 +21,15 @@
                 Clicked="OpenNewWindow_OnClicked"
             />
             <Button
+                x:Name="DelFiles"
+                Text="Удалить старые файлы"
+                HorizontalOptions="Center"
+                WidthRequest="500"
+                Clicked="DelFiles_OnClicked"
+                />
+            
+            
+            <Button
                 x:Name="CloseDebug"
                 Text="Закрыть окно дебага"
                 HorizontalOptions="Center"
