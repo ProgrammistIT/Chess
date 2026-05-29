@@ -8,14 +8,17 @@
             <Label  Text="White Turn"
                     FontSize="30"
                     HorizontalOptions="Center"
-                    x:Name="Title_Game"/>
+                    x:Name="TitleGame"/>
         
             <Border Stroke="Gray"   
                     StrokeThickness="1"
                     HeightRequest="400"
                     WidthRequest="400"
-                    HorizontalOptions="Center"
-                />
+                    HorizontalOptions="Center">
+                <Grid x:Name="ChessBoardGrid" ColumnSpacing="0" RowSpacing="0">
+                    <!-- ДОБАВЛЕНО: Сюда программно добавятся 8 строк, 8 столбцов и 64 клетки -->
+                </Grid>    
+            </Border>
             <Button Text="Back"
                     x:Name="Back"
                     Clicked="Back_OnClicked"

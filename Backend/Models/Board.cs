@@ -6,6 +6,7 @@ namespace Chess.Backend.Models;
 public class Board
 {
     public Square[,] Squares { get; } = new Square[8, 8];
+    public Square this[int row, int col] => Squares[row, col];
 
     public Board()
     {
