@@ -37,9 +37,45 @@ public partial class GamePage : ContentPage
                 var cell = new BoxView();
                 cell.Color = GetColor(square);
                 cell.Margin = new Thickness(0, 0, 0, 0);
-                Grid.SetRow(cell, j);
-                Grid.SetColumn(cell, i);
+                Grid.SetRow(cell, i);
+                Grid.SetColumn(cell, j);
                 ChessBoardGrid.Children.Add(cell);
+                if(board[i, j].Piece == null) continue;
+                var pieceImage = new Image();
+                pieceImage.Aspect = Aspect.AspectFit;
+                pieceImage.HorizontalOptions = LayoutOptions.Center;
+                pieceImage.VerticalOptions = LayoutOptions.Center;
+                pieceImage.Margin = 1;
+                var piece =  board[i, j].Piece;
+                if (piece.Color == PieceColor.Black)
+                {
+                    if (piece.Type == PieceType.King)
+                    {
+                        // Проверка на шах/мат
+                        pieceImage.Source = ImageSource.FromFile("king_black.png");
+                    }
+                    else if(piece.Type == PieceType.Queen) pieceImage.Source = ImageSource.FromFile("queen_black.png");
+                    else if(piece.Type == PieceType.Pawn) pieceImage.Source = ImageSource.FromFile("pawn_black.png");
+                    else if(piece.Type == PieceType.Knight) pieceImage.Source = ImageSource.FromFile("knight_black.png");
+                    else if(piece.Type == PieceType.Bishop) pieceImage.Source = ImageSource.FromFile("bishop_black.png");
+                    else if(piece.Type == PieceType.Rook) pieceImage.Source = ImageSource.FromFile("rook_black.png");
+                }
+                else if (piece.Color == PieceColor.White)
+                {
+                    if (piece.Type == PieceType.King)
+                    {
+                        pieceImage.Source = ImageSource.FromFile("king_white.png");
+                    }
+                    else if(piece.Type == PieceType.Queen)  pieceImage.Source = ImageSource.FromFile("queen_white.png");
+                    else if(piece.Type == PieceType.Pawn) pieceImage.Source = ImageSource.FromFile("pawn_white.png");
+                    else if(piece.Type == PieceType.Knight) pieceImage.Source = ImageSource.FromFile("knight_white.png");
+                    else if(piece.Type == PieceType.Bishop) pieceImage.Source = ImageSource.FromFile("bishop_white.png");
+                    else if(piece.Type == PieceType.Rook)  pieceImage.Source = ImageSource.FromFile("rook_white.png");
+                    
+                }
+                Grid.SetColumn(pieceImage, j);
+                Grid.SetRow(pieceImage, i);
+                ChessBoardGrid.Children.Add(pieceImage);
             }
         }
         

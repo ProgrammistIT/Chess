@@ -16,12 +16,27 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Add delete files button">
+    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Draw board">
+      <change afterPath="$PROJECT_DIR$/Resources/Images/bishop_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/bishop_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/king_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/king_black_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/king_black_mate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/king_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/king_white_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/king_white_mate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/kinght_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/knight_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/pawn_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/pawn_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/queen_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/queen_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/rook_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/rook_white.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Models/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Models/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debug.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debug.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GamePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GamePage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Images/dotnet_bot.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,59 +81,59 @@
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000044346352166" />
-      <entry key="S5" value="1.007860507951539" />
-      <entry key="S10" value="1.1202108977628853" />
-      <entry key="S30" value="2.6609970674292813" />
-      <entry key="S60" value="8.200321266587995" />
-      <entry key="M2" value="21.056163867897595" />
-      <entry key="M5" value="45.2238778407984" />
-      <entry key="M10" value="72.13581961598881" />
-      <entry key="M15" value="100.0114177276222" />
-      <entry key="M30" value="180.80026869105822" />
-      <entry key="H1" value="287.00130347640766" />
-      <entry key="H2" value="381.0569761430828" />
-      <entry key="H4" value="445.19897589362523" />
-      <entry key="D1" value="510.44020907755333" />
-      <entry key="W1" value="522.8866300239275" />
+      <entry key="S2" value="1.0000000000000004" />
+      <entry key="S5" value="1.0000015081620852" />
+      <entry key="S10" value="1.0035755178185497" />
+      <entry key="S30" value="2.14416706258591" />
+      <entry key="S60" value="7.760518152955266" />
+      <entry key="M2" value="22.229812714424448" />
+      <entry key="M5" value="55.17994738046956" />
+      <entry key="M10" value="80.76185903563325" />
+      <entry key="M15" value="92.87014298426553" />
+      <entry key="M30" value="113.54808273123545" />
+      <entry key="H1" value="168.79837529670894" />
+      <entry key="H2" value="284.3094440596195" />
+      <entry key="H4" value="415.44529466781694" />
+      <entry key="D1" value="602.8616986350436" />
+      <entry key="W1" value="645.523816549456" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.0964587154313219E-97" />
-      <entry key="MS500" value="5.684494446496997E-20" />
-      <entry key="S2" value="2.769264020527353E-5" />
-      <entry key="S5" value="0.027794168192914477" />
-      <entry key="S10" value="0.28655918584333506" />
-      <entry key="S30" value="1.578416301324868" />
-      <entry key="S60" value="3.3018576742315076" />
-      <entry key="M2" value="6.1597585389398315" />
-      <entry key="M5" value="11.323359835236873" />
-      <entry key="M10" value="17.83214227818247" />
-      <entry key="M15" value="25.11996667481084" />
-      <entry key="M30" value="46.479915701772256" />
-      <entry key="H1" value="74.44010698815313" />
-      <entry key="H2" value="99.15951805626668" />
-      <entry key="H4" value="116.01717665059516" />
-      <entry key="D1" value="133.17062303500654" />
-      <entry key="W1" value="136.44413031308542" />
+      <entry key="MS100" value="3.6012278193037958E-9" />
+      <entry key="MS500" value="0.025419360500127622" />
+      <entry key="S2" value="0.7229416661157815" />
+      <entry key="S5" value="1.6295891799607474" />
+      <entry key="S10" value="2.196219935055657" />
+      <entry key="S30" value="3.5908708780008625" />
+      <entry key="S60" value="7.689576844547925" />
+      <entry key="M2" value="16.49483270273786" />
+      <entry key="M5" value="32.4219521209139" />
+      <entry key="M10" value="42.948112937015495" />
+      <entry key="M15" value="47.56407308229404" />
+      <entry key="M30" value="54.36995645360745" />
+      <entry key="H1" value="69.30455043627481" />
+      <entry key="H2" value="99.600257799546" />
+      <entry key="H4" value="133.88903525094833" />
+      <entry key="D1" value="182.88843934071787" />
+      <entry key="W1" value="194.0448196541889" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.002489376225232933" />
-      <entry key="MS500" value="0.30145195692269006" />
-      <entry key="S2" value="0.7410013358775407" />
-      <entry key="S5" value="0.9191345874506333" />
-      <entry key="S10" value="1.3248410371687234" />
-      <entry key="S30" value="4.143546881971085" />
-      <entry key="S60" value="11.389683872716182" />
-      <entry key="M2" value="27.106405402097504" />
-      <entry key="M5" value="56.47039756785875" />
-      <entry key="M10" value="89.9119679953671" />
-      <entry key="M15" value="125.0820420557365" />
-      <entry key="M30" value="227.23896604269174" />
-      <entry key="H1" value="361.4103379353534" />
-      <entry key="H2" value="480.1963864086231" />
-      <entry key="H4" value="561.2045459517122" />
-      <entry key="D1" value="643.6086348092174" />
-      <entry key="W1" value="659.3304392750554" />
+      <entry key="MS100" value="0.06983044627383471" />
+      <entry key="MS500" value="0.5981174430167594" />
+      <entry key="S2" value="1.3612170502457506" />
+      <entry key="S5" value="2.312918027025298" />
+      <entry key="S10" value="2.9831223913753138" />
+      <entry key="S30" value="5.612245037885071" />
+      <entry key="S60" value="15.311167246032438" />
+      <entry key="M2" value="38.57068849043311" />
+      <entry key="M5" value="87.47234432428053" />
+      <entry key="M10" value="123.6194694173926" />
+      <entry key="M15" value="140.36580502085343" />
+      <entry key="M30" value="167.87764113583196" />
+      <entry key="H1" value="238.07634322157526" />
+      <entry key="H2" value="383.89027430280487" />
+      <entry key="H4" value="549.3212206766867" />
+      <entry key="D1" value="785.7471542929298" />
+      <entry key="W1" value="839.5681841258308" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -224,7 +239,8 @@
       <workItem from="1779991652218" duration="176000" />
       <workItem from="1779991847347" duration="707000" />
       <workItem from="1779993047424" duration="1805000" />
-      <workItem from="1780041535776" duration="4428000" />
+      <workItem from="1780041535776" duration="6554000" />
+      <workItem from="1780066653529" duration="1793000" />
     </task>
     <task id="LOCAL-00001" summary="Add debug button, New game open new window">
       <option name="closed" value="true" />
@@ -250,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779994237462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Draw board">
+      <option name="closed" value="true" />
+      <created>1780048481404</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780048481404</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +296,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add debug button, New game open new window" />
     <MESSAGE value="Add delete files button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add delete files button" />
+    <MESSAGE value="Draw board" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draw board" />
   </component>
 </project>
