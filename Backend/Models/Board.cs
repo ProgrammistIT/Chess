@@ -7,9 +7,15 @@ public class Board
 {
     public Square[,] Squares { get; } = new Square[8, 8];
     public Square this[int row, int col] => Squares[row, col];
+    public bool IsWhiteTurn { get; private set; }
 
+    public void ChangeTurn()
+    {
+        IsWhiteTurn = !IsWhiteTurn;
+    }
     public Board()
     {
+        IsWhiteTurn = true;
         InitSquares();
         PlacePieces();
     }

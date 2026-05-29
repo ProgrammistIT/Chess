@@ -11,75 +11,87 @@ namespace Chess;
 
 public partial class GamePage : ContentPage
 {
+    private Board _board;
+    private Image[,] _pieceImages;
+    private Image[,] _turnImages;
+    private int _colChosen,  _rowChosen;
+    private bool _isChosen;
+    // Инициализация
     public GamePage()
     {
+        _board = new Board();
+        _pieceImages = new Image[8, 8];
+        _turnImages = new Image[8, 8];
+        _colChosen = -1;
+        _rowChosen = -1;
+        _isChosen = false;
         InitializeComponent();
         InitializeChessBoard();
     }
-
-    private Color GetColor(Square square)
-    {
-        var black = new Color(0, 0, 25);
-        var white = new Color(255, 255, 230);
-        if (square.ColorOfSquare == SquareColor.Dark) return black;
-        else return white;
-    }
+    // Инициализация шахматной доски
     private void InitializeChessBoard()
     {
         for(int i = 0; i < 8; i++) ChessBoardGrid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
         for(int i = 0; i < 8; i++) ChessBoardGrid.RowDefinitions.Add(new  RowDefinition {Height = new GridLength(1, GridUnitType.Star)});
-        Board board = new Board();
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
             {
-                var square = board[i, j];
+                // Впихуиваем клетку
+                var square = _board[i, j];
                 var cell = new BoxView();
                 cell.Color = GetColor(square);
                 cell.Margin = new Thickness(0, 0, 0, 0);
                 Grid.SetRow(cell, i);
                 Grid.SetColumn(cell, j);
+                
+                // Впихуиваем обработчик нажатия К САМОЙ КЛЕТКЕ
+                var tapTrack = new TapGestureRecognizer();
+                tapTrack.Tapped += OnSquareTapped;
+                cell.GestureRecognizers.Add(tapTrack);
+                
+                // Добавляем отрисованную и готовую к нажатиям клетку
                 ChessBoardGrid.Children.Add(cell);
-                if(board[i, j].Piece == null) continue;
-                var pieceImage = new Image();
-                pieceImage.Aspect = Aspect.AspectFit;
-                pieceImage.HorizontalOptions = LayoutOptions.Center;
-                pieceImage.VerticalOptions = LayoutOptions.Center;
-                pieceImage.Margin = 1;
-                var piece =  board[i, j].Piece;
-                if (piece.Color == PieceColor.Black)
-                {
-                    if (piece.Type == PieceType.King)
-                    {
-                        // Проверка на шах/мат
-                        pieceImage.Source = ImageSource.FromFile("king_black.png");
-                    }
-                    else if(piece.Type == PieceType.Queen) pieceImage.Source = ImageSource.FromFile("queen_black.png");
-                    else if(piece.Type == PieceType.Pawn) pieceImage.Source = ImageSource.FromFile("pawn_black.png");
-                    else if(piece.Type == PieceType.Knight) pieceImage.Source = ImageSource.FromFile("knight_black.png");
-                    else if(piece.Type == PieceType.Bishop) pieceImage.Source = ImageSource.FromFile("bishop_black.png");
-                    else if(piece.Type == PieceType.Rook) pieceImage.Source = ImageSource.FromFile("rook_black.png");
-                }
-                else if (piece.Color == PieceColor.White)
-                {
-                    if (piece.Type == PieceType.King)
-                    {
-                        pieceImage.Source = ImageSource.FromFile("king_white.png");
-                    }
-                    else if(piece.Type == PieceType.Queen)  pieceImage.Source = ImageSource.FromFile("queen_white.png");
-                    else if(piece.Type == PieceType.Pawn) pieceImage.Source = ImageSource.FromFile("pawn_white.png");
-                    else if(piece.Type == PieceType.Knight) pieceImage.Source = ImageSource.FromFile("knight_white.png");
-                    else if(piece.Type == PieceType.Bishop) pieceImage.Source = ImageSource.FromFile("bishop_white.png");
-                    else if(piece.Type == PieceType.Rook)  pieceImage.Source = ImageSource.FromFile("rook_white.png");
-                    
-                }
-                Grid.SetColumn(pieceImage, j);
+                
+                // Впихуиваем картинку в клетку
+                if(_board[i, j].Piece == null) continue; // Если надо, конечно
+                var pieceImage = GetFigurePicture(i, j);
+                _pieceImages[i, j] = pieceImage;
                 Grid.SetRow(pieceImage, i);
+                Grid.SetColumn(pieceImage, j);
                 ChessBoardGrid.Children.Add(pieceImage);
             }
         }
+        ClearTurns();
+    }
+    // При нажатии на клетку
+    private void OnSquareTapped(object sender, EventArgs e)
+    {
+        
+        if (sender is not BoxView cell)
+        {
+            Console.WriteLine("Empty");
+            return;
+        }
+        int row = Grid.GetRow(cell);
+        int col = Grid.GetColumn(cell);
+        
+        var piece = _board[row, col];
+        if (piece.Piece != null)
+        {
+            if (!CheckTurn(piece.Piece))
+            {
+                OnEmptyClick(row, col);
+                return;
+            }
+            OnPieceClick(row, col);
+        }
+        else{
+            OnEmptyClick(row, col);
+        }
         
     }
+    // Кнопка возврата
     private async void Back_OnClicked(object? sender, EventArgs e)
     {
         try

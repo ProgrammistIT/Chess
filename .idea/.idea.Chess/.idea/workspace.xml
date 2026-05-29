@@ -16,27 +16,16 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Draw board">
-      <change afterPath="$PROJECT_DIR$/Resources/Images/bishop_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/bishop_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/king_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/king_black_check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/king_black_mate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/king_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/king_white_check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/king_white_mate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/kinght_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/knight_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/pawn_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/pawn_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/queen_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/queen_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/rook_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Images/rook_white.png" afterDir="false" />
+    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Draw pieces on board">
+      <change afterPath="$PROJECT_DIR$/GamePage.xaml2.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/atack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/chose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Images/move.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Models/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Models/Board.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GamePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GamePage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Images/dotnet_bot.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +52,12 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/D5CEC8DB9A94572657FFF041/Microsoft.Maui.Controls.SourceGen/Microsoft.Maui.Controls.SourceGen.XamlGenerator/App.xaml.xsg.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/D5CEC8DB9A94572657FFF041/Microsoft.Maui.Controls.SourceGen/Microsoft.Maui.Controls.SourceGen.XamlGenerator/GamePage.xaml.xsg.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/EA7FEABE4254831F82FA6FB1/Microsoft.Maui.Controls.SourceGen/Microsoft.Maui.Controls.SourceGen.XamlGenerator/App.xaml.xsg.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/EA7FEABE4254831F82FA6FB1/Microsoft.Maui.Controls.SourceGen/Microsoft.Maui.Controls.SourceGen.XamlGenerator/AppShell.xaml.xsg.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/28e9468ed8433be113ef843e3db7fbb542b4478c96c3f72c22f4bf9a1b9636c/ButtonHandler.Windows.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ae28807047c48adaaf7fbc0d463cd34c48952b8e09950c7a52c325cbcaceaa6/Button.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bed429c4a5b521274565f54527bf631ced45db2fe2fa3030418de9e798f79/ButtonElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/obj/Debug/net10.0-windows10.0.19041.0/win-x64/Platforms/Windows/App.g.i.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
@@ -79,61 +71,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000000000004" />
-      <entry key="S5" value="1.0000015081620852" />
-      <entry key="S10" value="1.0035755178185497" />
-      <entry key="S30" value="2.14416706258591" />
-      <entry key="S60" value="7.760518152955266" />
-      <entry key="M2" value="22.229812714424448" />
-      <entry key="M5" value="55.17994738046956" />
-      <entry key="M10" value="80.76185903563325" />
-      <entry key="M15" value="92.87014298426553" />
-      <entry key="M30" value="113.54808273123545" />
-      <entry key="H1" value="168.79837529670894" />
-      <entry key="H2" value="284.3094440596195" />
-      <entry key="H4" value="415.44529466781694" />
-      <entry key="D1" value="602.8616986350436" />
-      <entry key="W1" value="645.523816549456" />
+      <entry key="MS100" value="1.0000000152142663" />
+      <entry key="MS500" value="1.027451292810316" />
+      <entry key="S2" value="1.5139809967355333" />
+      <entry key="S5" value="2.107350736113167" />
+      <entry key="S10" value="2.4761275297895287" />
+      <entry key="S30" value="3.253383051726262" />
+      <entry key="S60" value="6.381225624524607" />
+      <entry key="M2" value="16.113325244528035" />
+      <entry key="M5" value="44.84644565462142" />
+      <entry key="M10" value="83.63103237491087" />
+      <entry key="M15" value="118.78051179771636" />
+      <entry key="M30" value="222.7703900175747" />
+      <entry key="H1" value="394.3698145361865" />
+      <entry key="H2" value="622.7623908663826" />
+      <entry key="H4" value="864.6040727587067" />
+      <entry key="D1" value="1232.4278532710416" />
+      <entry key="W1" value="1321.2329874415939" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="3.6012278193037958E-9" />
-      <entry key="MS500" value="0.025419360500127622" />
-      <entry key="S2" value="0.7229416661157815" />
-      <entry key="S5" value="1.6295891799607474" />
-      <entry key="S10" value="2.196219935055657" />
-      <entry key="S30" value="3.5908708780008625" />
-      <entry key="S60" value="7.689576844547925" />
-      <entry key="M2" value="16.49483270273786" />
-      <entry key="M5" value="32.4219521209139" />
-      <entry key="M10" value="42.948112937015495" />
-      <entry key="M15" value="47.56407308229404" />
-      <entry key="M30" value="54.36995645360745" />
-      <entry key="H1" value="69.30455043627481" />
-      <entry key="H2" value="99.600257799546" />
-      <entry key="H4" value="133.88903525094833" />
-      <entry key="D1" value="182.88843934071787" />
-      <entry key="W1" value="194.0448196541889" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="4.901088936172953E-102" />
+      <entry key="S2" value="8.870567706663841E-26" />
+      <entry key="S5" value="1.9032185250569708E-10" />
+      <entry key="S10" value="3.0621512842928196E-5" />
+      <entry key="S30" value="0.13167270115228102" />
+      <entry key="S60" value="1.3602096408781632" />
+      <entry key="M2" value="5.418342769886758" />
+      <entry key="M5" value="15.367704814779215" />
+      <entry key="M10" value="25.940213544280002" />
+      <entry key="M15" value="34.65312319674695" />
+      <entry key="M30" value="59.13406452911442" />
+      <entry key="H1" value="99.95190746096134" />
+      <entry key="H2" value="156.39325469919183" />
+      <entry key="H4" value="217.63966412694867" />
+      <entry key="D1" value="312.0224638672003" />
+      <entry key="W1" value="334.9295214169378" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.06983044627383471" />
-      <entry key="MS500" value="0.5981174430167594" />
-      <entry key="S2" value="1.3612170502457506" />
-      <entry key="S5" value="2.312918027025298" />
-      <entry key="S10" value="2.9831223913753138" />
-      <entry key="S30" value="5.612245037885071" />
-      <entry key="S60" value="15.311167246032438" />
-      <entry key="M2" value="38.57068849043311" />
-      <entry key="M5" value="87.47234432428053" />
-      <entry key="M10" value="123.6194694173926" />
-      <entry key="M15" value="140.36580502085343" />
-      <entry key="M30" value="167.87764113583196" />
-      <entry key="H1" value="238.07634322157526" />
-      <entry key="H2" value="383.89027430280487" />
-      <entry key="H4" value="549.3212206766867" />
-      <entry key="D1" value="785.7471542929298" />
-      <entry key="W1" value="839.5681841258308" />
+      <entry key="MS100" value="0.9460576610197452" />
+      <entry key="MS500" value="1.0159724634463263" />
+      <entry key="S2" value="1.4711446121564145" />
+      <entry key="S5" value="2.038141941137196" />
+      <entry key="S10" value="2.420152893968501" />
+      <entry key="S30" value="3.342798112384903" />
+      <entry key="S60" value="7.664814316407578" />
+      <entry key="M2" value="21.422152604128083" />
+      <entry key="M5" value="60.107620936341135" />
+      <entry key="M10" value="109.48441994436143" />
+      <entry key="M15" value="153.35764121762517" />
+      <entry key="M30" value="281.8417740387885" />
+      <entry key="H1" value="494.2707917428762" />
+      <entry key="H2" value="779.1174478643819" />
+      <entry key="H4" value="1082.2180575100438" />
+      <entry key="D1" value="1544.4444019221805" />
+      <entry key="W1" value="1656.1616079863359" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -151,32 +143,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Android.Chess.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;UWP.Chess.executor&quot;: &quot;Run&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;iOS.Chess.executor&quot;: &quot;Run&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Android.Chess.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "UWP.Chess.executor": "Debug",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "iOS.Chess.executor": "Run",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="UWP.Chess">
     <configuration name="Chess: Windows Machine" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Chess.csproj" />
@@ -240,7 +232,9 @@
       <workItem from="1779991847347" duration="707000" />
       <workItem from="1779993047424" duration="1805000" />
       <workItem from="1780041535776" duration="6554000" />
-      <workItem from="1780066653529" duration="1793000" />
+      <workItem from="1780066653529" duration="1996000" />
+      <workItem from="1780070469503" duration="87000" />
+      <workItem from="1780078332874" duration="8768000" />
     </task>
     <task id="LOCAL-00001" summary="Add debug button, New game open new window">
       <option name="closed" value="true" />
@@ -274,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780048481404</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Draw pieces on board">
+      <option name="closed" value="true" />
+      <created>1780068641968</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1780068641968</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +299,39 @@
     <MESSAGE value="Add debug button, New game open new window" />
     <MESSAGE value="Add delete files button" />
     <MESSAGE value="Draw board" />
-    <option name="LAST_COMMIT_MESSAGE" value="Draw board" />
+    <MESSAGE value="Draw pieces on board" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draw pieces on board" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GamePage.xaml2.cs</url>
+          <line>134</line>
+          <properties documentPath="C:\Users\qwerty741\RiderProjects\Chess\GamePage.xaml2.cs" containingFunctionPresentation="Method 'OnPieceClick'">
+            <startOffsets>
+              <option value="4545" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4555" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GamePage.xaml.cs</url>
+          <line>79</line>
+          <properties documentPath="C:\Users\qwerty741\RiderProjects\Chess\GamePage.xaml.cs" containingFunctionPresentation="Method 'OnSquareTapped'">
+            <startOffsets>
+              <option value="2693" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2717" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

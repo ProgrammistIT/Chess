@@ -12,8 +12,8 @@
         
             <Border Stroke="Gray"   
                     StrokeThickness="1"
-                    HeightRequest="500"
-                    WidthRequest="500"
+                    HeightRequest="800"
+                    WidthRequest="800"
                     HorizontalOptions="Center">
                 <Grid x:Name="ChessBoardGrid" ColumnSpacing="0" RowSpacing="0">
                     <!-- ДОБАВЛЕНО: Сюда программно добавятся 8 строк, 8 столбцов и 64 клетки -->
