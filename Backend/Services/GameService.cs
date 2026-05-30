@@ -4,8 +4,9 @@ using Chess.Backend.Models.Pieces;
 
 namespace Chess.Backend.Services;
 
-public class GameService
+public partial class GameService
 {
+    private readonly GameSerializer _serializer;
     public Board Board { get; }
     public Square this[int row, int col] => Board.Squares[row, col];
     
@@ -14,12 +15,13 @@ public class GameService
     
     public delegate void OnGameOver(PieceColor winner);
     public event OnGameOver? GameOver;
-
-    public GameService()
+    
+    public GameService(string filePath)
     {
         Board = new Board();
+        _serializer = new JsonGameSerializer(filePath);
     }
-
+    
     public bool TryMove(int fromRow, int fromColumn, int toRow, int toColumn)
     {
         var from =  this[fromRow, fromColumn];
@@ -89,20 +91,13 @@ public class GameService
                 yield return (r, c);
         }
     }
-
-    public bool IsCheckmate(PieceColor color)
+    
+    // сереализация и дессериализация
+    public void Save() => _serializer.Serialize(Board);
+    public void Load()
     {
-        if (!IsInCheck(color)) return false;
-
-        foreach (var square in Board.Squares)
-        {
-            if (square.Piece == null) continue;
-
-            if (square.Piece.Color == color)
-            {
-                if (GetLegalMoves(square.Row, square.Column).Any()) return false;
-            }
-        }
-        return true;
+        var state = _serializer.Deserialize();
+        if (state != null)
+            _serializer.Restore(Board, state);
     }
 }
