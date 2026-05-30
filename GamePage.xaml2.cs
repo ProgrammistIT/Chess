@@ -147,6 +147,10 @@ public partial class GamePage : ContentPage
                 _isChosen = false;
                 ClearTurns();
                 _board.ChangeTurn();
+                if (_board.IsWhiteTurn)
+                    TitleGame.Text = "White turn";
+                else 
+                    TitleGame.Text = "Black turn";
                 moved = true;
                 break;
             }

@@ -25,8 +25,10 @@ public partial class GamePage : ContentPage
         _colChosen = -1;
         _rowChosen = -1;
         _isChosen = false;
+        
         InitializeComponent();
         InitializeChessBoard();
+        Loaded += OnPageLoaded;
     }
     // Инициализация шахматной доски
     private void InitializeChessBoard()
@@ -101,6 +103,45 @@ public partial class GamePage : ContentPage
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
+        }
+    }
+    
+    
+    private void OnPageLoaded(object sender, EventArgs e)
+    {
+        Loaded -= OnPageLoaded; // отписываемся, чтобы не дублировать
+        AdjustChessBoardSize();
+        
+        // Подписка на изменение размера окна (для ротации/ресайза)
+        this.SizeChanged += (s, args) => AdjustChessBoardSize();
+    }
+
+    private void AdjustChessBoardSize()
+    {
+        // Параметры
+        double horizontalMargin = 30 * 2; // из Margin="16,20"
+        double strokeBuffer = Table.StrokeThickness * 2; // запас на обводку
+        double maxSize = 600;
+    
+        // Доступная ширина с учётом отступов страницы и элемента
+        double availableWidth = this.Width 
+                                - Padding.HorizontalThickness 
+                                - horizontalMargin;
+    
+        // Целевой размер: мин(доступно, максимум) + запас на рамку
+        double targetSize = Math.Min(availableWidth, maxSize);
+    
+        if (targetSize > 0)
+        {
+            // Округляем до целого пикселя + добавляем запас на StrokeThickness
+            int size = (int)Math.Round(targetSize, MidpointRounding.AwayFromZero);
+        
+            Table.WidthRequest = size + strokeBuffer;
+            Table.HeightRequest = size + strokeBuffer; // Квадрат!
+        
+            // Опционально: ограничить внутренний Grid, чтобы клетки не вылезали
+            ChessBoardGrid.WidthRequest = size;
+            ChessBoardGrid.HeightRequest = size;
         }
     }
 }

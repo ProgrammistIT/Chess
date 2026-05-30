@@ -38,13 +38,13 @@
                 x:Name="NewGame"
                 Clicked="NewGame_Clicked"
                 Text="Новая игра"
-                HorizontalOptions="Center"
-                WidthRequest="300"/>
+                HorizontalOptions="Fill"
+                MaximumWidthRequest="300"/>
             <Button
                 x:Name="ContinueButton"
                 Text="Продолжить игру" 
-                HorizontalOptions="Center"
-                WidthRequest="300"/>
+                HorizontalOptions="Fill"
+                MaximumWidthRequest="300"/>
         </VerticalStackLayout>
     </ScrollView>
             <!--

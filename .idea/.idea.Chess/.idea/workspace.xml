@@ -16,10 +16,13 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Big update">
+    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Add normal turns, fixed invisible black">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Models/Piece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Models/Piece.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GamePage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GamePage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GamePage.xaml2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MainPage.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,65 +68,65 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000000022593822" />
-      <entry key="S60" value="1.0002138875332676" />
-      <entry key="M2" value="1.0728939161723932" />
-      <entry key="M5" value="3.6768208958266535" />
-      <entry key="M10" value="14.438321982091663" />
-      <entry key="M15" value="32.16730884528626" />
-      <entry key="M30" value="109.14563164360735" />
-      <entry key="H1" value="278.1221226613368" />
-      <entry key="H2" value="537.2293020352427" />
-      <entry key="H4" value="828.9601926882168" />
-      <entry key="D1" value="1295.8852929045333" />
-      <entry key="W1" value="1412.2128065719799" />
+      <entry key="MS100" value="1.001061264514304" />
+      <entry key="MS500" value="1.2582082053942174" />
+      <entry key="S2" value="2.176936385731757" />
+      <entry key="S5" value="3.6733659058289665" />
+      <entry key="S10" value="5.433262107354863" />
+      <entry key="S30" value="8.015820100402962" />
+      <entry key="S60" value="9.637318759002515" />
+      <entry key="M2" value="12.26077669231323" />
+      <entry key="M5" value="19.712490628793006" />
+      <entry key="M10" value="30.55609728096855" />
+      <entry key="M15" value="40.78925478351343" />
+      <entry key="M30" value="84.25538203890952" />
+      <entry key="H1" value="214.88326733333037" />
+      <entry key="H2" value="467.32539253820505" />
+      <entry key="H4" value="786.9240136327786" />
+      <entry key="D1" value="1341.0888561767424" />
+      <entry key="W1" value="1485.0626631338698" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="7.880905382100261E-141" />
-      <entry key="S5" value="9.09370806556301E-57" />
-      <entry key="S10" value="9.753235068713137E-29" />
-      <entry key="S30" value="8.356574938536226E-10" />
-      <entry key="S60" value="7.523532080650652E-5" />
-      <entry key="M2" value="0.026491107965761082" />
-      <entry key="M5" value="1.1815629987747427" />
-      <entry key="M10" value="7.066634750499193" />
-      <entry key="M15" value="15.974139485958224" />
-      <entry key="M30" value="45.88089446221656" />
-      <entry key="H1" value="97.6172019714869" />
-      <entry key="H2" value="169.07337857858133" />
-      <entry key="H4" value="246.88162589576066" />
-      <entry key="D1" value="369.97691883131296" />
-      <entry key="W1" value="400.5407900335155" />
+      <entry key="MS100" value="3.056559091661271E-32" />
+      <entry key="MS500" value="5.932231869142165E-7" />
+      <entry key="S2" value="0.05374702536642837" />
+      <entry key="S5" value="0.5897596920137321" />
+      <entry key="S10" value="1.3260601339603648" />
+      <entry key="S30" value="2.2990545644983564" />
+      <entry key="S60" value="2.788467065319349" />
+      <entry key="M2" value="3.486616895350425" />
+      <entry key="M5" value="5.084656794967845" />
+      <entry key="M10" value="7.275466104419911" />
+      <entry key="M15" value="10.084431949379299" />
+      <entry key="M30" value="25.26778948537612" />
+      <entry key="H1" value="67.29885830637559" />
+      <entry key="H2" value="140.45568722596352" />
+      <entry key="H4" value="228.54599874170782" />
+      <entry key="D1" value="377.6760457416502" />
+      <entry key="W1" value="416.0888721142132" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9012504626108302" />
-      <entry key="MS500" value="0.9794202975869268" />
-      <entry key="S2" value="0.9948148855014217" />
-      <entry key="S5" value="0.9979227189990506" />
-      <entry key="S10" value="0.998960819551523" />
-      <entry key="S30" value="0.9996534895130536" />
-      <entry key="S60" value="1.0001142151756095" />
-      <entry key="M2" value="1.099036888172339" />
-      <entry key="M5" value="4.854001060156959" />
-      <entry key="M10" value="21.49102825537947" />
-      <entry key="M15" value="48.11888930565463" />
-      <entry key="M30" value="154.99031087818048" />
-      <entry key="H1" value="375.6980715098858" />
-      <entry key="H2" value="706.2660659367841" />
-      <entry key="H4" value="1075.8150462884043" />
-      <entry key="D1" value="1665.8555811857143" />
-      <entry key="W1" value="1812.7525736359642" />
+      <entry key="MS100" value="0.0014524584629307944" />
+      <entry key="MS500" value="0.3777546210718953" />
+      <entry key="S2" value="1.755431662474375" />
+      <entry key="S5" value="3.9298928467326095" />
+      <entry key="S10" value="6.497127528110857" />
+      <entry key="S30" value="10.177799531506873" />
+      <entry key="S60" value="12.339359178663196" />
+      <entry key="M2" value="15.691147766196393" />
+      <entry key="M5" value="24.76449198706498" />
+      <entry key="M10" value="37.808893940931334" />
+      <entry key="M15" value="50.85397719344896" />
+      <entry key="M30" value="109.50108964607337" />
+      <entry key="H1" value="282.15300497569103" />
+      <entry key="H2" value="607.7504328790936" />
+      <entry key="H4" value="1015.4451281565308" />
+      <entry key="D1" value="1718.7581160409504" />
+      <entry key="W1" value="1901.1504700326036" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
@@ -137,33 +140,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Android.Chess.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;UWP.Chess.executor&quot;: &quot;Run&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;iOS.Chess.executor&quot;: &quot;Run&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Android.Chess.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "UWP.Chess.executor": "Run",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "iOS.Chess.executor": "Run",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="UWP.Chess">
+}]]></component>
+  <component name="RunManager" selected="Android.Chess">
     <configuration name="Chess: Windows Machine" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Chess.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net10.0-windows10.0.19041.0" />
@@ -229,7 +232,7 @@
       <workItem from="1780066653529" duration="1996000" />
       <workItem from="1780070469503" duration="87000" />
       <workItem from="1780078332874" duration="11151000" />
-      <workItem from="1780126416071" duration="1293000" />
+      <workItem from="1780126416071" duration="4424000" />
     </task>
     <task id="LOCAL-00001" summary="Add debug button, New game open new window">
       <option name="closed" value="true" />
@@ -279,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780097804113</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add normal turns, fixed invisible black">
+      <option name="closed" value="true" />
+      <created>1780127755782</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1780127755782</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +315,7 @@
     <MESSAGE value="Draw board" />
     <MESSAGE value="Draw pieces on board" />
     <MESSAGE value="Big update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Big update" />
+    <MESSAGE value="Add normal turns, fixed invisible black" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add normal turns, fixed invisible black" />
   </component>
 </project>

@@ -4,17 +4,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Chess.GamePage">
     <ContentPage.Content>
-        <VerticalStackLayout>
+        <VerticalStackLayout
+            
+           >
             <Label  Text="White Turn"
                     FontSize="30"
                     HorizontalOptions="Center"
                     x:Name="TitleGame"/>
         
             <Border Stroke="Gray"   
+                    x:Name="Table"
                     StrokeThickness="1"
-                    HeightRequest="800"
-                    WidthRequest="800"
-                    HorizontalOptions="Center">
+                    MaximumWidthRequest="600"
+                    HorizontalOptions="Center"
+                    Margin="30, 40, 30, 70">
                 <Grid x:Name="ChessBoardGrid" ColumnSpacing="0" RowSpacing="0">
                     <!-- ДОБАВЛЕНО: Сюда программно добавятся 8 строк, 8 столбцов и 64 клетки -->
                 </Grid>    
