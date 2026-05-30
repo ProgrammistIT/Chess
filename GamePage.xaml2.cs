@@ -70,7 +70,7 @@ public partial class GamePage : ContentPage
             Aspect = Aspect.AspectFit,
             HorizontalOptions = LayoutOptions.Center,
             VerticalOptions = LayoutOptions.Center,
-            Margin = 1,
+            Margin = 0,
             InputTransparent = true
         };
         image.Source = source;
@@ -118,11 +118,51 @@ public partial class GamePage : ContentPage
     // Действия при нажатии на пустую клетку
     private void OnEmptyClick(int row, int col)
     {
-        TitleGame.Text = $"Empty {row} {col}";
+        if (!_isChosen) return;
+
+        bool moved = false;
+        var piece = _board[_rowChosen, _colChosen].Piece;
+    
+        foreach (var (r, c) in piece.GetValidMoves(_board.Squares, _rowChosen, _colChosen))
+        {
+            if (row == r && col == c)
+            {
+                piece.DoTurn(_board.Squares, _rowChosen, _colChosen, r, c);
+                if (_pieceImages[r, c] != null)
+                {
+                    ChessBoardGrid.Children.Remove(_pieceImages[r, c]);
+                    _pieceImages[r, c] = null;
+                }
+                var movedImage = _pieceImages[_rowChosen, _colChosen];
+                if (movedImage != null)
+                {
+                    ChessBoardGrid.Children.Remove(movedImage);
+                    Grid.SetRow(movedImage, r);
+                    Grid.SetColumn(movedImage, c);
+                    ChessBoardGrid.Children.Add(movedImage);
+                    _pieceImages[r, c] = movedImage;
+                }
+
+                _pieceImages[_rowChosen, _colChosen] = null;
+                _isChosen = false;
+                ClearTurns();
+                _board.ChangeTurn();
+                moved = true;
+                break;
+            }
+        }
+        if (!moved)
+        {
+            _isChosen = false;
+            ClearTurns();
+        }
     }
     // Действие при нажатии на клетку с фигурой
     private void OnPieceClick(int row, int col)
     {
+        _isChosen = true;
+        _colChosen = col;
+        _rowChosen = row;
         var piece =  _board[row, col];
         ClearTurns();
         var imgChose = GetImage(ImageSource.FromFile("chose.png"));
