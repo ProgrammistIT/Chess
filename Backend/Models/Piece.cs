@@ -2,7 +2,7 @@ using Chess.Backend.Enums;
 
 namespace Chess.Backend.Models;
 
-public abstract class Piece
+public abstract class Piece : IPiece
 {
     public PieceColor Color { get; }
     public PieceType Type { get; }
