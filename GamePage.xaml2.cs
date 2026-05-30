@@ -14,8 +14,8 @@ public partial class GamePage : ContentPage
     // Получение информации про очередность хода
     private bool CheckTurn(Piece piece)
     {
-        return (_board.IsWhiteTurn && piece.Color == PieceColor.White) ||
-               (!_board.IsWhiteTurn && piece.Color == PieceColor.Black);
+        return (_gameService.Board.IsWhiteTurn && piece.Color == PieceColor.White) ||
+               (!_gameService.Board.IsWhiteTurn && piece.Color == PieceColor.Black);
     }
     // Работа с клетками подсказок
     private void DeleteTurn(int row, int col)
@@ -78,7 +78,7 @@ public partial class GamePage : ContentPage
     }
     private Image GetFigurePicture(int row, int col)
     {
-        var piece =  _board[row, col];
+        var piece =  _gameService[row, col];
         if (piece.Piece == null) return null;
         var img = GetImage(GetImageName(piece.Piece));
         return img;
@@ -120,46 +120,29 @@ public partial class GamePage : ContentPage
     {
         if (!_isChosen) return;
 
-        bool moved = false;
-        var piece = _board[_rowChosen, _colChosen].Piece;
-    
-        foreach (var (r, c) in piece.GetValidMoves(_board.Squares, _rowChosen, _colChosen))
-        {
-            if (row == r && col == c)
-            {
-                piece.DoTurn(_board.Squares, _rowChosen, _colChosen, r, c);
-                if (_pieceImages[r, c] != null)
-                {
-                    ChessBoardGrid.Children.Remove(_pieceImages[r, c]);
-                    _pieceImages[r, c] = null;
-                }
-                var movedImage = _pieceImages[_rowChosen, _colChosen];
-                if (movedImage != null)
-                {
-                    ChessBoardGrid.Children.Remove(movedImage);
-                    Grid.SetRow(movedImage, r);
-                    Grid.SetColumn(movedImage, c);
-                    ChessBoardGrid.Children.Add(movedImage);
-                    _pieceImages[r, c] = movedImage;
-                }
+        bool moved = _gameService.TryMove(_rowChosen, _colChosen, row, col);
 
-                _pieceImages[_rowChosen, _colChosen] = null;
-                _isChosen = false;
-                ClearTurns();
-                _board.ChangeTurn();
-                if (_board.IsWhiteTurn)
-                    TitleGame.Text = "White turn";
-                else 
-                    TitleGame.Text = "Black turn";
-                moved = true;
-                break;
-            }
-        }
-        if (!moved)
+        if (moved)
         {
-            _isChosen = false;
-            ClearTurns();
+            if (_pieceImages[row, col] != null)
+            {
+                ChessBoardGrid.Children.Remove(_pieceImages[row, col]);
+                _pieceImages[row, col] = null;
+            }
+            var movedImage = _pieceImages[_rowChosen, _colChosen];
+            if (movedImage != null)
+            {
+                ChessBoardGrid.Children.Remove(movedImage);
+                Grid.SetRow(movedImage, row);
+                Grid.SetColumn(movedImage, col);
+                ChessBoardGrid.Children.Add(movedImage);
+                _pieceImages[row, col] = movedImage;
+            }
+            _pieceImages[_rowChosen, _colChosen] = null;
         }
+
+        _isChosen = false;
+        ClearTurns();
     }
     // Действие при нажатии на клетку с фигурой
     private void OnPieceClick(int row, int col)
@@ -167,20 +150,18 @@ public partial class GamePage : ContentPage
         _isChosen = true;
         _colChosen = col;
         _rowChosen = row;
-        var piece =  _board[row, col];
+        var piece = _gameService[row, col];
         ClearTurns();
         var imgChose = GetImage(ImageSource.FromFile("chose.png"));
         Grid.SetColumn(imgChose, col);
         Grid.SetRow(imgChose, row);
         ChessBoardGrid.Children.Add(imgChose);
         _turnImages[row, col] = imgChose;
-        foreach (var (r, c) in piece.Piece.GetValidMoves(_board.Squares, row, col))
+        foreach (var (r, c) in piece.Piece.GetValidMoves(_gameService.Board.Squares, row, col))
         {
-            Image img;
-            if(_board[r,c].Piece == null)
-                img = GetImage(ImageSource.FromFile("move.png"));
-            else
-                img = GetImage(ImageSource.FromFile("atack.png"));
+            Image img = _gameService[r, c].Piece == null
+                ? GetImage(ImageSource.FromFile("move.png"))
+                : GetImage(ImageSource.FromFile("atack.png"));
             Grid.SetRow(img, r);
             Grid.SetColumn(img, c);
             ChessBoardGrid.Children.Add(img);

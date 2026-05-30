@@ -50,31 +50,4 @@ public abstract class Piece
             c += dc;
         }
     }
-
-    public Piece DoTurn(Square[,] square, int rowFrom, int colFrom, int rowTo, int colTo)
-    {
-        if (rowFrom < 0 || rowFrom >= 8 || colFrom < 0 || colFrom >= 8 || rowTo < 0 || rowTo >= 8 || colTo < 0 || colTo >= 8)
-        {
-            return null;
-        }
-        bool isLegal = false;
-        foreach (var (r, c) in GetValidMoves(square, rowFrom, colFrom))
-        {
-            if (r == rowTo && c == colTo)
-            {
-                isLegal = true;
-                break;
-            }
-        }
-
-        if (!isLegal)
-        {
-            return null;
-        }
-        Piece killedPiece = square[rowTo, colTo].Piece;
-        square[rowTo, colTo].Piece = square[rowFrom, colFrom].Piece;
-        square[rowFrom, colFrom].Piece = null;
-
-        return killedPiece;
-    }
 }
