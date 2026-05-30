@@ -41,10 +41,11 @@
                 HorizontalOptions="Fill"
                 MaximumWidthRequest="300"/>
             <Button
-                x:Name="ContinueButton"
-                Text="Продолжить игру" 
-                HorizontalOptions="Fill"
-                MaximumWidthRequest="300"/>
+    x:Name="ContinueButton"
+    Text="Продолжить игру"
+    Clicked="ContinueGame_Clicked"
+    HorizontalOptions="Fill"
+    MaximumWidthRequest="300"/>
         </VerticalStackLayout>
     </ScrollView>
             <!--
