@@ -13,20 +13,23 @@ public partial class GamePage : ContentPage
     private int _colChosen, _rowChosen;
     private bool _isChosen;
 
-    public GamePage()
+    public GamePage(string? filePath = null)
     {
-        _gameService = new GameService();
+        var path = filePath ?? Path.Combine(FileSystem.Current.AppDataDirectory, "game.json");
+        _gameService = new GameService(path);
         _pieceImages = new Image[8, 8];
         _turnImages = new Image[8, 8];
         _colChosen = -1;
         _rowChosen = -1;
         _isChosen = false;
 
-        // Подписка на событие завершения хода — обновляем заголовок
         _gameService.MoveCompleted += HandleMoveCompleted;
-        // Подписка на событие конца игры — показываем победителя
         _gameService.GameOver += HandleGameOver;
-        
+
+        // Загружаем сохранение если путь передан
+        if (filePath != null)
+            _gameService.Load();
+
         InitializeComponent();
         InitializeChessBoard();
         Loaded += OnPageLoaded;
@@ -131,5 +134,11 @@ public partial class GamePage : ContentPage
             ChessBoardGrid.WidthRequest = size;
             ChessBoardGrid.HeightRequest = size;
         }
+    }
+    // закрытие игры
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        _gameService.Save();
     }
 }
