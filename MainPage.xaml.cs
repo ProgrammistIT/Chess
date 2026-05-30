@@ -71,4 +71,10 @@ public partial class MainPage : ContentPage
         var debug = new Debug();
         Navigation.PushModalAsync(debug);
     }
+    private async void ContinueGame_Clicked(object sender, EventArgs e)
+{
+    var filePath = Path.Combine(FileSystem.Current.AppDataDirectory, "game.json");
+    var gamePage = new GamePage(filePath);
+    await Navigation.PushModalAsync(gamePage);
+}
 }
