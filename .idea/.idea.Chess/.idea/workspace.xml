@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="RunManager" selected="iOS.Chess">
+  <component name="RunManager" selected="macOS.Chess">
     <configuration name="Chess" type="XamarinIOSProject" factoryName="Xamarin.iOS">
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/Chess.csproj" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -18,5 +18,9 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="iOS.Chess" />
+      <item itemvalue="macOS.Chess" />
+    </list>
   </component>
 </project>
