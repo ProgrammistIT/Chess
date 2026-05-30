@@ -157,7 +157,7 @@ public partial class GamePage : ContentPage
         Grid.SetRow(imgChose, row);
         ChessBoardGrid.Children.Add(imgChose);
         _turnImages[row, col] = imgChose;
-        foreach (var (r, c) in piece.Piece.GetValidMoves(_gameService.Board.Squares, row, col))
+        foreach (var (r, c) in _gameService.GetLegalMoves(row, col))
         {
             Image img = _gameService[r, c].Piece == null
                 ? GetImage(ImageSource.FromFile("move.png"))
@@ -167,5 +167,17 @@ public partial class GamePage : ContentPage
             ChessBoardGrid.Children.Add(img);
             _turnImages[r, c] = img;
         }
+    }
+    // Вызывается после каждого хода — меняет заголовок на чью очередь
+    private void HandleMoveCompleted(PieceColor nextTurn)
+    {
+        TitleGame.Text = nextTurn == PieceColor.White ? "White turn" : "Black turn";
+    }
+    // Вызывается когда один из королей получает мат — показывает победителя и закрывает страницу
+    private async void HandleGameOver(PieceColor winner)
+    {
+        string winnerText = winner == PieceColor.White ? "White" : "Black";
+        await DisplayAlert("Game Over", $"{winnerText} wins!", "OK");
+        await Navigation.PopModalAsync();
     }
 }

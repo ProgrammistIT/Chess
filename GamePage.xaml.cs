@@ -22,17 +22,17 @@ public partial class GamePage : ContentPage
         _rowChosen = -1;
         _isChosen = false;
 
-        _gameService.MoveCompleted += HandleMoveCompleted; // правильная подписка
+        // Подписка на событие завершения хода — обновляем заголовок
+        _gameService.MoveCompleted += HandleMoveCompleted;
+        // Подписка на событие конца игры — показываем победителя
+        _gameService.GameOver += HandleGameOver;
         
         InitializeComponent();
         InitializeChessBoard();
         Loaded += OnPageLoaded;
     }
 
-    private void HandleMoveCompleted(PieceColor nextTurn)
-    {
-        TitleGame.Text = nextTurn == PieceColor.White ? "White turn" : "Black turn";
-    }
+    
 
     private void InitializeChessBoard()
     {

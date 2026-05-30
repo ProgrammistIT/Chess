@@ -8,9 +8,12 @@ public class GameService
 {
     public Board Board { get; }
     public Square this[int row, int col] => Board.Squares[row, col];
+    
     public delegate void OnMoveComplete(PieceColor nextTurn);
-
     public event OnMoveComplete? MoveCompleted;
+    
+    public delegate void OnGameOver(PieceColor winner);
+    public event OnGameOver? GameOver;
 
     public GameService()
     {
@@ -24,22 +27,18 @@ public class GameService
         if (from.Piece is null) return false;
         if (from.Piece.Color != (Board.IsWhiteTurn ? PieceColor.White : PieceColor.Black)) return false;
 
-        var validMoves = from.Piece.GetValidMoves(Board.Squares, fromRow, fromColumn);
-        if (!validMoves.Contains((toRow, toColumn))) return false;
+        if (!GetLegalMoves(from.Row, from.Column).Contains((toRow, toColumn))) return false;
         
-        var captured = Board.Squares[toRow, toColumn].Piece;
         Board.Squares[toRow, toColumn].Piece = from.Piece;
         from.Piece = null;
-
-        if (IsInCheck(Board.IsWhiteTurn ? PieceColor.White : PieceColor.Black))
-        {
-            from.Piece = Board.Squares[toRow, toColumn].Piece;
-            Board.Squares[toRow, toColumn].Piece = captured;
-            return false;
-        }
         
         Board.ChangeTurn();
-        MoveCompleted?.Invoke(Board.IsWhiteTurn ? PieceColor.White : PieceColor.Black);
+        var nextColor = Board.IsWhiteTurn ? PieceColor.White : PieceColor.Black;
+
+        if (IsCheckmate(nextColor))
+            GameOver?.Invoke(nextColor == PieceColor.White ? PieceColor.Black : PieceColor.White);
+
+        MoveCompleted?.Invoke(nextColor);
         return true;
     }
 
@@ -68,5 +67,42 @@ public class GameService
             }
         }
         return false;
+    }
+
+    public IEnumerable<(int Row, int Col)> GetLegalMoves(int row, int column)
+    {
+        var square = this[row, column];
+        if (square.Piece == null) yield break;
+
+        foreach (var (r, c) in square.Piece.GetValidMoves(Board.Squares, row, column))
+        {
+            var captured = Board.Squares[r, c].Piece;
+            Board.Squares[r, c].Piece = square.Piece;
+            square.Piece = null;
+
+            bool inCheck = (IsInCheck(Board.IsWhiteTurn ? PieceColor.White : PieceColor.Black));
+            
+            square.Piece = Board.Squares[r, c].Piece;
+            Board.Squares[r, c].Piece = captured;
+
+            if (!inCheck)
+                yield return (r, c);
+        }
+    }
+
+    public bool IsCheckmate(PieceColor color)
+    {
+        if (!IsInCheck(color)) return false;
+
+        foreach (var square in Board.Squares)
+        {
+            if (square.Piece == null) continue;
+
+            if (square.Piece.Color == color)
+            {
+                if (GetLegalMoves(square.Row, square.Column).Any()) return false;
+            }
+        }
+        return true;
     }
 }
