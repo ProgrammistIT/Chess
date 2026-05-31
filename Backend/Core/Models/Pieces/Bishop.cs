@@ -1,6 +1,7 @@
-using Chess.Backend.Enums;
+using Chess.Backend.Core.Enums;
+using Chess.Backend.Models;
 
-namespace Chess.Backend.Models.Pieces;
+namespace Chess.Backend.Core.Models.Pieces;
 
 public class Bishop : Piece
 {

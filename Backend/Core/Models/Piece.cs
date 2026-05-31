@@ -1,4 +1,4 @@
-using Chess.Backend.Enums;
+using Chess.Backend.Core.Enums;
 
 namespace Chess.Backend.Models;
 

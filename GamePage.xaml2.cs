@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Chess.Backend.Enums;
+using Chess.Backend.Core.Enums;
 using Chess.Backend.Models;
 using Microsoft.Maui.Controls;
 

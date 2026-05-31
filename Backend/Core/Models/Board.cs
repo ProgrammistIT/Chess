@@ -1,5 +1,5 @@
-using Chess.Backend.Enums;
-using Chess.Backend.Models.Pieces;
+using Chess.Backend.Core.Enums;
+using Chess.Backend.Core.Models.Pieces;
 
 namespace Chess.Backend.Models;
 

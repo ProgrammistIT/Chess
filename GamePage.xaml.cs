@@ -1,7 +1,6 @@
-using Chess.Backend.Enums;
 using Chess.Backend.Models;
-using Chess.Backend.Services;
 using Microsoft.Maui.Controls;
+using GameService = Chess.Backend.Core.Models.Services.GameService;
 
 namespace Chess;
 

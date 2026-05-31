@@ -1,7 +1,7 @@
 using System.Text.Json;
 using Chess.Backend.Models;
 
-namespace Chess.Backend.Services;
+namespace Chess.Backend.Data;
 
 public class JsonGameSerializer : GameSerializer
 {
