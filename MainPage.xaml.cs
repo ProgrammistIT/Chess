@@ -17,6 +17,7 @@ public partial class MainPage : ContentPage
         _isTimerActive = false;
         _shouldStop = false;
     }
+
     // При появлении страницы
     protected override void OnAppearing()
     {
@@ -29,12 +30,14 @@ public partial class MainPage : ContentPage
             Dispatcher.StartTimer(TimeSpan.FromSeconds(IntervalTimer), CheckFileAndUpdateButton);
         }
     }
+
     // При "уходе" страницы
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
         _shouldStop = true;
     }
+
     // Проверка на наличие файла
     private bool CheckFileAndUpdateButton()
     {
@@ -47,6 +50,7 @@ public partial class MainPage : ContentPage
         ContinueButton.IsEnabled = MainPageButtons.HasSavedFile();
         return true;
     }
+
     // На нажатие новой кнопки
     private async void NewGame_Clicked(object sender, EventArgs e)
     {
@@ -60,7 +64,7 @@ public partial class MainPage : ContentPage
         File.Create(jsonFilePath).Close();
 
         var gamePage = new GamePage();
-        await Navigation.PushModalAsync(gamePage);  
+        await Navigation.PushModalAsync(gamePage);
     }
 
     // ДЕБАГ
@@ -72,9 +76,9 @@ public partial class MainPage : ContentPage
         Navigation.PushModalAsync(debug);
     }
     private async void ContinueGame_Clicked(object sender, EventArgs e)
-{
-    var filePath = Path.Combine(FileSystem.Current.AppDataDirectory, "game.json");
-    var gamePage = new GamePage(filePath);
-    await Navigation.PushModalAsync(gamePage);
-}
+    {
+        var filePath = Path.Combine(FileSystem.Current.AppDataDirectory, "game.json");
+        var gamePage = new GamePage(filePath);
+        await Navigation.PushModalAsync(gamePage);
+    }
 }

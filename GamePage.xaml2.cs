@@ -173,6 +173,12 @@ public partial class GamePage : ContentPage
     {
         TitleGame.Text = nextTurn == PieceColor.White ? "White turn" : "Black turn";
     }
+    // Вызывается когда король под шахом
+    private async void HandleCheck(PieceColor colorInCheck)
+    {
+        string color = colorInCheck == PieceColor.White ? "White" : "Black";
+        await DisplayAlert("Шах!", $"{color} king is in check!", "OK");
+    }
     // Вызывается когда один из королей получает мат — показывает победителя и закрывает страницу
     private async void HandleGameOver(PieceColor winner)
     {

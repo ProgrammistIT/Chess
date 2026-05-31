@@ -13,9 +13,10 @@ public partial class GamePage : ContentPage
     private int _colChosen, _rowChosen;
     private bool _isChosen;
 
-    public GamePage(string? filePath = null)
+    public GamePage(string? filePath = null, string? saveFolder = null)
     {
-        var path = filePath ?? Path.Combine(FileSystem.Current.AppDataDirectory, "game.json");
+        var folder = saveFolder ?? FileSystem.Current.AppDataDirectory;
+        var path = filePath ?? Path.Combine(folder, "game.json");
         _gameService = new GameService(path);
         _pieceImages = new Image[8, 8];
         _turnImages = new Image[8, 8];
@@ -25,8 +26,8 @@ public partial class GamePage : ContentPage
 
         _gameService.MoveCompleted += HandleMoveCompleted;
         _gameService.GameOver += HandleGameOver;
+        _gameService.Check += HandleCheck;
 
-        // Загружаем сохранение если путь передан
         if (filePath != null)
             _gameService.Load();
 
