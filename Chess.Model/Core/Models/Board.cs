@@ -1,7 +1,7 @@
-using Chess.Backend.Core.Enums;
-using Chess.Backend.Core.Models.Pieces;
+using Chess.Model.Core.Enums;
+using Chess.Model.Core.Models.Pieces;
 
-namespace Chess.Backend.Models;
+namespace Chess.Model.Models;
 
 public class Board
 {

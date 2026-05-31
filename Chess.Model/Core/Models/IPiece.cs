@@ -1,6 +1,6 @@
-using Chess.Backend.Core.Enums;
+using Chess.Model.Core.Enums;
 
-namespace Chess.Backend.Models;
+namespace Chess.Model.Models;
 
 public interface IPiece
 {

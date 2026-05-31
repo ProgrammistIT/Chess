@@ -1,6 +1,6 @@
-using Chess.Backend.Models;
+using Chess.Model.Models;
 
-namespace Chess.Backend.Data;
+namespace Chess.Model.Data;
 
 public interface ISerialize
 {

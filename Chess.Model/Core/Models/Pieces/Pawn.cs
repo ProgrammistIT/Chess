@@ -1,7 +1,7 @@
-using Chess.Backend.Core.Enums;
-using Chess.Backend.Models;
+using Chess.Model.Core.Enums;
+using Chess.Model.Models;
 
-namespace Chess.Backend.Core.Models.Pieces;
+namespace Chess.Model.Core.Models.Pieces;
 
 public class Pawn : Piece
 {

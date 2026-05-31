@@ -1,4 +1,4 @@
-namespace Chess.Backend.Core.Enums;
+namespace Chess.Model.Core.Enums;
 
 public enum SquareColor
 {

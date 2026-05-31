@@ -1,6 +1,6 @@
-using Chess.Backend.Core.Enums;
+using Chess.Model.Core.Enums;
 
-namespace Chess.Backend.Data;
+namespace Chess.Model.Data;
 
 public class PieceState
 {

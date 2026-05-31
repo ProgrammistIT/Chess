@@ -1,6 +1,4 @@
-using Chess.Backend.Models;
-
-namespace Chess.Backend.Data;
+namespace Chess.Model.Data;
 
 public class GameState
 {

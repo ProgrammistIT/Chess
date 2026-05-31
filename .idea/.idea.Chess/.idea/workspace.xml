@@ -22,27 +22,31 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="Add some changes">
+    <list default="true" id="f6b314ec-905d-4ff4-91c2-dbb117c3e3e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chess/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Enums/PieceColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Enums/PieceColor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Enums/PieceType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Enums/PieceType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Enums/SquareColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Enums/SquareColor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Board.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/IPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/IPiece.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Piece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Piece.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Bishop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Bishop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/King.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Pieces/King.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Knight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Knight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Pawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Pawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Queen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Queen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Rook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Rook.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Services/GameService.CheckMate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Services/GameService.CheckMate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Services/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Services/GameService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Square.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Core/Models/Square.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Data/GameSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Data/GameSerializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Data/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Data/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Data/JsonGameSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Data/JsonGameSerializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Data/PieceState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Data/PieceState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Enums/PieceColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Enums/PieceColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Enums/PieceType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Enums/PieceType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Enums/SquareColor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Enums/SquareColor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Board.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/IPiece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/IPiece.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Piece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Piece.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Bishop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Pieces/Bishop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/King.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Pieces/King.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Knight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Pieces/Knight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Pawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Pieces/Pawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Queen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Pieces/Queen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Pieces/Rook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Pieces/Rook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Services/GameService.CheckMate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Services/GameService.CheckMate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Services/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Services/GameService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Core/Models/Square.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Core/Models/Square.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Data/GameSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Data/GameSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Data/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Data/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Data/ISerialize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Data/ISerialize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Data/JsonGameSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Data/JsonGameSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Data/PieceState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.Model/Data/PieceState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GamePage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GamePage.xaml2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GamePage.xaml2.cs" afterDir="false" />
     </list>
@@ -70,8 +74,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Backend/Models/PieceState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainPage.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///usr/local/share/dotnet/sdk/10.0.203/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
@@ -264,7 +268,8 @@
       <workItem from="1780261451855" duration="475000" />
       <workItem from="1780261955469" duration="4000" />
       <workItem from="1780262016723" duration="11000" />
-      <workItem from="1780262054432" duration="2103000" />
+      <workItem from="1780262054432" duration="3289000" />
+      <workItem from="1780315598266" duration="7708000" />
     </task>
     <task id="LOCAL-00001" summary="Add debug button, New game open new window">
       <option name="closed" value="true" />

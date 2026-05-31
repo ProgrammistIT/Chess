@@ -1,9 +1,9 @@
-using Chess.Backend.Core.Enums;
-using Chess.Backend.Core.Models.Pieces;
-using Chess.Backend.Data;
-using Chess.Backend.Models;
+using Chess.Model.Data;
+using Chess.Model.Core.Enums;
+using Chess.Model.Core.Models.Pieces;
+using Chess.Model.Models;
 
-namespace Chess.Backend.Core.Models.Services;
+namespace Chess.Model.Core.Models.Services;
 
 public partial class GameService
 {

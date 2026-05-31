@@ -1,9 +1,10 @@
 using System.Text.Json;
-using Chess.Backend.Core.Enums;
-using Chess.Backend.Core.Models.Pieces;
-using Chess.Backend.Models;
+using Chess.Model.Data;
+using Chess.Model.Core.Enums;
+using Chess.Model.Core.Models.Pieces;
+using Chess.Model.Models;
 
-namespace Chess.Backend.Data;
+namespace Chess.Model.Data;
 
 public abstract class GameSerializer : ISerialize
 {
