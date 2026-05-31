@@ -16,6 +16,9 @@ public partial class GameService
     public delegate void OnGameOver(PieceColor winner);
     public event OnGameOver? GameOver;
     
+    public delegate void OnCheck(PieceColor colorInCheck);
+    public event OnCheck? Check;
+    
     public GameService(string filePath)
     {
         Board = new Board();
@@ -39,6 +42,8 @@ public partial class GameService
 
         if (IsCheckmate(nextColor))
             GameOver?.Invoke(nextColor == PieceColor.White ? PieceColor.Black : PieceColor.White);
+        else if (IsInCheck(nextColor))
+            Check?.Invoke(nextColor);
 
         MoveCompleted?.Invoke(nextColor);
         return true;
@@ -46,25 +51,27 @@ public partial class GameService
 
     public bool IsInCheck(PieceColor color)
     {
-        int rowKing = 0, colKing = 0;
-        foreach (var piece in Board.Squares)
+        Square? kingSquare = null;
+        
+        foreach (var square in Board.Squares)
         {
-            if (piece.Piece is King k && k.Color == color)
+            if (square.Piece is King k && k.Color == color)
             {
-                rowKing = piece.Row;
-                colKing = piece.Column;
+                kingSquare = square;
                 break;
             }
         }
 
-        foreach (var piece in Board.Squares)
+        if (kingSquare == null) return false;
+        
+        foreach (var square in Board.Squares)
         {
-            if (piece.Piece != null && piece.Piece.Color != color)
+            if (square.Piece != null && square.Piece.Color != color)
             {
-                foreach (var (r, c) in piece.Piece.GetValidMoves(Board.Squares, piece.Row, piece.Column))
+                foreach (var (r, c) in square.Piece.GetValidMoves(Board.Squares, square.Row, square.Column))
                 {
-                    if (r == rowKing && c == colKing)
-                        return true; // король под ударом
+                    if (Board.Squares[r, c] == kingSquare) // используем перегруженный ==
+                        return true;
                 }
             }
         }
@@ -75,8 +82,10 @@ public partial class GameService
     {
         var square = this[row, column];
         if (square.Piece == null) yield break;
-
-        foreach (var (r, c) in square.Piece.GetValidMoves(Board.Squares, row, column))
+        
+        // приведение к интерфейсу
+        IPiece piece = square.Piece;
+        foreach (var (r, c) in piece.GetValidMoves(Board.Squares, row, column))
         {
             var captured = Board.Squares[r, c].Piece;
             Board.Squares[r, c].Piece = square.Piece;
@@ -90,6 +99,11 @@ public partial class GameService
             if (!inCheck)
                 yield return (r, c);
         }
+    }
+    // перегрузка
+    public IEnumerable<(int Row, int Col)> GetLegalMoves(Square square)
+    {
+        return GetLegalMoves(square.Row, square.Column);
     }
     
     // сереализация и дессериализация

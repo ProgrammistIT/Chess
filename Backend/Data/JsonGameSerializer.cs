@@ -29,6 +29,6 @@ public class JsonGameSerializer : GameSerializer
     {
         if (!File.Exists(FilePath)) return null;
         var json = File.ReadAllText(FilePath);
-        return JsonSerializer.Deserialize<GameState>(json);
+        return DeserializeFromJson<GameState>(json); // используем обобщённый метод
     }
 }

@@ -1,10 +1,12 @@
+using System.Text.Json;
+using Chess.Backend.Data;
 using Chess.Backend.Models;
 using Chess.Backend.Models.Pieces;
 using Chess.Backend.Enums;
 
 namespace Chess.Backend.Services;
 
-public abstract class GameSerializer
+public abstract class GameSerializer : ISerialize
 {
     protected readonly string FilePath;
     
@@ -16,13 +18,20 @@ public abstract class GameSerializer
     public abstract void Serialize(Board board);
     public abstract GameState? Deserialize();
 
+    protected T DeserializeFromJson<T>(string json) where T : class
+    {
+        return JsonSerializer.Deserialize<T>(json) ?? throw new ArgumentException("Invalid JSON");
+    }
     public void Restore(Board board, GameState state)
     {
         foreach (var square in board.Squares)
             square.Piece = null;
 
         foreach (var pieceState in state.Pieces)
-            board.Squares[pieceState.Row, pieceState.Col].Piece = CreatePiece(pieceState);
+        {
+            IPiece piece = CreatePiece(pieceState); // приведение к интерфейсу
+            board.Squares[pieceState.Row, pieceState.Col].Piece = piece as Piece;
+        }
 
         if (!state.IsWhiteTurn)
             board.ChangeTurn();
